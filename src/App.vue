@@ -6,10 +6,7 @@
     :zoom="zoom"
     @update_zoom="update_zoom"
   >
-    <mapbox-marker :coords="{lng: -1.8386651794459397, lat: 52.48393078103982}"/>
-    <mapbox-marker :coords="{lng: -1.9433786193877154, lat: 52.5199819587728}"/>
-    <mapbox-marker :coords="{lng: -1.9675828735379923, lat: 52.48382624189935}"/>
-    <mapbox-marker :coords="{lng: -1.8717958251975801, lat: 52.44722228119437}"/>
+    <mapbox-marker v-for="marker in markers" :coords="marker.coords" />
   </mapbox>
 </template>
 
@@ -17,12 +14,17 @@
   import { defineComponent } from 'vue';
   import Mapbox from "./Components/Mapbox.vue";
   import MapboxMarker from "./Components/MapboxMarker.vue";
+  import markers from './../data/markers.json';
 
   export default defineComponent({
+    created() {
+      this.markers = markers;
+    },
     data() {
       return {
         center: {lat: 52.489471, lng: -1.898575},
-        zoom: 12
+        zoom: 12,
+        markers: []
       }
     },
     components: {

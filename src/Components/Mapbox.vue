@@ -12,7 +12,7 @@ export default {
   mounted() {
     this.map = new mapboxgl.Map({
       container: this.$refs.mapbox,
-      style: 'mapbox://styles/mapbox/streets-v11',
+      style: 'mapbox://styles/smartercoding/cknn7ok8c47vb17s5c1h1ahl2',
       center: this.center,
       zoom: this.zoom,
     });

@@ -28,6 +28,10 @@ module.exports = {
             {
                 test: /\.vue$/,
                 loader: 'vue-loader'
+            },
+            {
+                test: /\.svg/,
+                type: 'asset/inline'
             }
         ]
     }

@@ -8,7 +8,7 @@ html, body, .main {
     padding: 0;
 }
 
-.mapboxgl-map {
+.mapbox, .mapboxgl-map {
     width: 100%;
     height: 100%;
 }

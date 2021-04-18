@@ -1,6 +1,8 @@
 <template>
-  <div ref="mapbox"></div>
-  <slot v-if="loaded"></slot>
+  <div class="mapbox">
+    <div ref="mapbox"></div>
+    <slot v-if="loaded"></slot>
+  </div>
 </template>
 
 <script>

@@ -1,9 +1,18 @@
 
 <template>
-  <h1>Interactive Map</h1>
+  <mapbox></mapbox>
 </template>
 
 <script>
   import { defineComponent } from 'vue';
-  export default defineComponent({});
+  import Mapbox from "./Components/Mapbox.vue";
+
+  export default defineComponent({
+    data() {
+      return {}
+    },
+    components: {
+      Mapbox
+    }
+  });
 </script>

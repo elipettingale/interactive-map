@@ -61,18 +61,18 @@
     },
     computed: {
       filtered_locations() {
-        let locations = this.locations;
-
         if (this.search === '') {
-          return locations;
+          return this.locations;
         }
 
-        return locations.filter((location) => {
-          if (location.title.includes(this.search)) {
+        let search = this.search.toLowerCase();
+
+        return this.locations.filter((location) => {
+          if (location.title.toLowerCase().includes(search)) {
             return true;
           }
 
-          if (location.description.includes(this.search)) {
+          if (location.description.toLowerCase().includes(search)) {
             return true;
           }
 

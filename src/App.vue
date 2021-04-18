@@ -32,7 +32,12 @@
       <div class="search__body">
         <input type="text" v-model="search" placeholder="Search" />
         <div class="results">
-          <result v-for="location in filtered_locations" :location="location" @click="select_location(location)" />
+          <result
+              v-for="location in filtered_locations"
+              :location="location"
+              :active="active_location_id === location.id"
+              @click="select_location(location)"
+          />
           <p class="no-results" v-if="filtered_locations.length === 0">No results</p>
         </div>
       </div>

@@ -136,26 +136,26 @@ h1, h2, h3, h4, h5, p {
                 font-size: 1rem;
                 margin-bottom: 1rem;
             }
-
-            .results {
-                .result {
-                    background: var(--white);
-                    padding: 1rem;
-                    margin-bottom: 0.5rem;
-
-                    &:hover {
-                        background: var(--secondary);
-                        color: var(--white);
-                        cursor: pointer;
-                    }
-                }
-            }
         }
     }
 
 }
 
 .result {
+    background: var(--white);
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+
+    &.is-active {
+        background: rgba(176, 101, 179, 0.2);
+    }
+
+    &:hover {
+        background: var(--secondary);
+        color: var(--white);
+        cursor: pointer;
+    }
+
     &__title {
         margin-bottom: 0.5rem;
     }

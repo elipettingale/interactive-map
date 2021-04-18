@@ -3,7 +3,7 @@
 
 :root {
     --orange: #fea20a;
-    --blue: #485cd7;
+    --blue: #383e6a;
     --white: #ffffff;
     --off-white: #e4e4e4;
     --grey: #2a2c2c;
@@ -23,6 +23,10 @@ body {
 
 * {
     box-sizing: border-box;
+}
+
+.main {
+    overflow: hidden;
 }
 
 .mapboxgl-map {
@@ -66,6 +70,22 @@ h1, h2, h3, h4, h5, p {
         padding: 1rem;
     }
 
+    &:not(.search-open) {
+        .search {
+            transform: translateX(-400px);
+        }
+    }
+
+    &.search-open {
+        .map {
+            transform: translateX(200px)
+        }
+    }
+
+    .map {
+        transition: transform 200ms ease-in-out;
+    }
+
     .search {
         position: absolute;
         top: 0;
@@ -75,10 +95,6 @@ h1, h2, h3, h4, h5, p {
         background: var(--off-white);
         transition: transform 200ms ease-in-out;
         z-index: 10;
-
-        &:not(.is-open) {
-            transform: translateX(-400px);
-        }
 
         &__header {
             background: var(--orange);

@@ -1,8 +1,9 @@
 
 <template>
-  <div class="app">
+  <div class="app" :class="{ 'search-open': search_open }">
     <div class="map">
       <mapbox
+          ref="mapbox"
           :center="center"
           @update_center="update_center"
           :zoom="zoom"
@@ -16,7 +17,7 @@
         <i class="fas fa-search"></i>
       </button>
     </div>
-    <div class="search" :class="{ 'is-open': search_open }">
+    <div class="search">
       <div class="search__header">
         <h2 class="title">Find your Location</h2>
         <button class="btn" @click="search_open = false">
@@ -90,7 +91,9 @@
       },
 
       select_location(location) {
-        console.log(location);
+        this.$refs.mapbox.map.flyTo({
+          center: location.coords
+        })
       }
     }
   });

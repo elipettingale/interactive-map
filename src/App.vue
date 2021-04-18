@@ -9,7 +9,12 @@
           :zoom="zoom"
           @update_zoom="update_zoom"
       >
-        <mapbox-marker v-for="location in locations" :location="location" @click="select_location(location)" />
+        <mapbox-marker
+            v-for="location in locations"
+            :location="location"
+            :active="active_location_id === location.id"
+            @click="select_location(location)"
+        />
       </mapbox>
     </div>
     <div class="controls">
@@ -57,7 +62,8 @@
         zoom: 12,
         locations: [],
         search_open: false,
-        search: ''
+        search: '',
+        active_location_id: null
       }
     },
     computed: {
@@ -91,6 +97,8 @@
       },
 
       select_location(location) {
+        this.active_location_id = location.id;
+
         this.$refs.mapbox.map.flyTo({
           center: location.coords
         })

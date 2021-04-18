@@ -2,7 +2,7 @@
 <script>
 export default {
   name: "mapbox-marker",
-  props: ['location'],
+  props: ['location', 'active'],
   emits: ['click'],
   mounted() {
     this.element = document.createElement('div');
@@ -19,6 +19,15 @@ export default {
     return {
       element: null,
       marker: null
+    }
+  },
+  watch: {
+    active(value) {
+      if (value) {
+        this.element.classList.add('is-active');
+      } else {
+        this.element.classList.remove('is-active');
+      }
     }
   },
   render() {

@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "title": "Lorem ipsum dolor",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+    "coords": {
+      "lat": 52.48393078103982, "lng": -1.8386651794459397
+    }
+  },
+  {
+    "id": 2,
+    "title": "Labore et dolore",
+    "description": "Labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris",
+    "coords": {
+      "lat": 52.5199819587728, "lng": -1.9433786193877154
+    }
+  },
+  {
+    "id": 3,
+    "title": "Duis aute irure",
+    "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+    "coords": {
+      "lat": 52.48382624189935, "lng": -1.9675828735379923
+    }
+  },
+  {
+    "id": 4,
+    "title": "Sed ut perspiciatis",
+    "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.",
+    "coords": {
+      "lat": 52.44722228119437, "lng": -1.8717958251975801
+    }
+  }
+]

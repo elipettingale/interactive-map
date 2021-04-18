@@ -8,23 +8,26 @@
           :zoom="zoom"
           @update_zoom="update_zoom"
       >
-        <mapbox-marker v-for="marker in markers" :coords="marker.coords" />
+        <mapbox-marker v-for="location in locations" :location="location" />
       </mapbox>
     </div>
     <div class="controls">
-      <button class="btn" @click="search = true">
+      <button class="btn" @click="search_open = true">
         <i class="fas fa-search"></i>
       </button>
     </div>
-    <div class="search" :class="{ 'is-open': search }">
+    <div class="search" :class="{ 'is-open': search_open }">
       <div class="search__header">
-        <h2 class="title">Find</h2>
-        <button class="btn" @click="search = false">
+        <h2 class="title">Find your Location</h2>
+        <button class="btn" @click="search_open = false">
           <i class="fas fa-times"></i>
         </button>
       </div>
       <div class="search__body">
-
+        <input type="text" v-model="search" placeholder="Search" />
+        <div class="results">
+          <result v-for="location in locations" :location="location" />
+        </div>
       </div>
     </div>
   </div>
@@ -34,23 +37,26 @@
   import { defineComponent } from 'vue';
   import Mapbox from "./Components/Mapbox.vue";
   import MapboxMarker from "./Components/MapboxMarker.vue";
-  import markers from './../data/markers.json';
+  import Result from "./Components/Result.vue";
+  import locations from '../data/locations.json';
 
   export default defineComponent({
+    components: {
+      MapboxMarker,
+      Mapbox,
+      Result
+    },
     created() {
-      this.markers = markers;
+      this.locations = locations;
     },
     data() {
       return {
         center: {lat: 52.489471, lng: -1.898575},
         zoom: 12,
-        markers: [],
-        search: false
+        locations: [],
+        search_open: false,
+        search: ''
       }
-    },
-    components: {
-      MapboxMarker,
-      Mapbox
     },
     methods: {
       update_zoom(zoom) {

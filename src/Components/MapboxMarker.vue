@@ -2,13 +2,13 @@
 <script>
 export default {
   name: "mapbox-marker",
-  props: ['coords'],
+  props: ['location'],
   mounted() {
     this.element = document.createElement('div');
     this.element.className = 'mapbox-marker';
 
     this.marker = new mapboxgl.Marker(this.element)
-        .setLngLat(this.coords)
+        .setLngLat(this.location.coords)
         .addTo(this.$parent.map);
   },
   data() {

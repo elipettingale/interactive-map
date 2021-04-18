@@ -2,9 +2,9 @@
 <template>
   <mapbox
     :center="center"
-    v-on:update:center="update_center"
+    @update_center="update_center"
     :zoom="zoom"
-    v-on:update:zoom="update_zoom"
+    @update_zoom="update_zoom"
   ></mapbox>
 </template>
 

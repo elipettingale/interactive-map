@@ -15,11 +15,11 @@ export default {
     });
 
     this.mapbox.on('moveend', (event) => {
-      this.$emit('update:center', this.mapbox.getCenter());
+      this.$emit('update_center', this.mapbox.getCenter());
     });
 
     this.mapbox.on('zoomend', (event) => {
-      this.$emit('update:zoom', this.mapbox.getZoom())
+      this.$emit('update_zoom', this.mapbox.getZoom())
     });
   },
   data() {

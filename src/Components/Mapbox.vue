@@ -28,10 +28,6 @@ export default {
     this.map.on('load', () => {
       this.loaded = true;
     });
-
-    this.map.on('click', (event) => {
-      console.log(event);
-    });
   },
   data() {
     return {

@@ -1,7 +1,7 @@
 <template>
   <div class="result">
-    <h4>{{ location.title }}</h4>
-    <p>{{ location.description }}</p>
+    <h4 class="result__title">{{ location.title }}</h4>
+    <p class="result__description">{{ location.description }}</p>
   </div>
 </template>
 

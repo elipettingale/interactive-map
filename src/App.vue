@@ -99,6 +99,10 @@
       select_location(location) {
         this.active_location_id = location.id;
 
+        if (window.innerWidth < 768) {
+          this.close_search();
+        }
+
         this.$refs.mapbox.map.flyTo({
           center: location.coords
         })

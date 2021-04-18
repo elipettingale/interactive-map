@@ -2,8 +2,11 @@
 @import "https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css";
 
 :root {
-    --primary: #fea20a;
+    --orange: #fea20a;
+    --blue: #485cd7;
     --white: #ffffff;
+    --off-white: #e4e4e4;
+    --black: #0e0e0e;
 }
 
 html, body {
@@ -24,6 +27,10 @@ html, body {
         width: 50px;
         height: 50px;
         cursor: pointer;
+
+        &.is-active {
+            background-image: url('marker-active.svg');
+        }
     }
 }
 
@@ -32,18 +39,51 @@ html, body {
     border-radius: 100%;
     height: 40px;
     width: 40px;
-    background: var(--primary);
+    background: var(--blue);
     color: var(--white);
     cursor: pointer;
 }
 
+h1, h2, h3, h4, h5 {
+    margin: 0;
+}
+
 .app {
 
-    &__controls {
+    .controls {
         position: absolute;
         top: 0;
         left: 0;
         padding: 1rem;
+    }
+
+    .search {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 400px;
+        background: var(--off-white);
+        transition: transform 200ms ease-in-out;
+
+        &:not(.is-open) {
+            transform: translateX(-400px);
+        }
+
+        &__header {
+            background: var(--orange);
+            padding: 1rem;
+            color: var(--white);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+
+            .btn {
+                background: var(--white);
+                color: var(--black);
+            }
+        }
     }
 
 }

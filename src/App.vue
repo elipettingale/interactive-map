@@ -1,7 +1,7 @@
 
 <template>
   <div class="app">
-    <div class="app__map">
+    <div class="map">
       <mapbox
           :center="center"
           @update_center="update_center"
@@ -11,10 +11,18 @@
         <mapbox-marker v-for="marker in markers" :coords="marker.coords" />
       </mapbox>
     </div>
-    <div class="app__controls">
+    <div class="controls">
       <button class="btn">
         <i class="fas fa-search"></i>
       </button>
+    </div>
+    <div class="search">
+      <div class="search__header">
+        <h2 class="title">Search</h2>
+        <button class="btn">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
     </div>
   </div>
 </template>

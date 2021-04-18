@@ -8,7 +8,7 @@
           :zoom="zoom"
           @update_zoom="update_zoom"
       >
-        <mapbox-marker v-for="location in locations" :location="location" />
+        <mapbox-marker v-for="location in locations" :location="location" @click="select_location(location)" />
       </mapbox>
     </div>
     <div class="controls">
@@ -26,7 +26,7 @@
       <div class="search__body">
         <input type="text" v-model="search" placeholder="Search" />
         <div class="results">
-          <result v-for="location in filtered_locations" :location="location" />
+          <result v-for="location in filtered_locations" :location="location" @click="select_location(location)" />
           <p class="no-results" v-if="filtered_locations.length === 0">No results</p>
         </div>
       </div>
@@ -87,6 +87,10 @@
 
       update_center(center) {
         this.center = center;
+      },
+
+      select_location(location) {
+        console.log(location);
       }
     }
   });

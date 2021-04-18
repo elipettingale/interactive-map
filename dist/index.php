@@ -6,7 +6,7 @@
 </head>
 <body>
 <main class="main">
-    <h1>Interactive Map</h1>
+<div id="app"></div>
 </main>
 <script src="main.js"></script>
 </body>

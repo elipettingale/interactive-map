@@ -78,12 +78,18 @@ h1, h2, h3, h4, h5, p {
     &:not(.search-open) {
         .search {
             transform: translateX(-400px);
+
+            @media only screen and (max-width: 767.98px) {
+                transform: translateX(-100%);
+            }
         }
     }
 
     &.search-open {
-        .map {
-            transform: translateX(200px)
+        @media only screen and (min-width: 768px) {
+            .map {
+                transform: translateX(200px)
+            }
         }
     }
 
@@ -100,6 +106,10 @@ h1, h2, h3, h4, h5, p {
         background: var(--off-white);
         transition: transform 200ms ease-in-out;
         z-index: 10;
+
+        @media only screen and (max-width: 767.98px) {
+            width: 100%;
+        }
 
         &__header {
             background: var(--primary);

@@ -26,7 +26,8 @@
       <div class="search__body">
         <input type="text" v-model="search" placeholder="Search" />
         <div class="results">
-          <result v-for="location in locations" :location="location" />
+          <result v-for="location in filtered_locations" :location="location" />
+          <p class="no-results" v-if="filtered_locations.length === 0">No results</p>
         </div>
       </div>
     </div>
@@ -56,6 +57,27 @@
         locations: [],
         search_open: false,
         search: ''
+      }
+    },
+    computed: {
+      filtered_locations() {
+        let locations = this.locations;
+
+        if (this.search === '') {
+          return locations;
+        }
+
+        return locations.filter((location) => {
+          if (location.title.includes(this.search)) {
+            return true;
+          }
+
+          if (location.description.includes(this.search)) {
+            return true;
+          }
+
+          return false;
+        });
       }
     },
     methods: {

@@ -12,16 +12,19 @@
       </mapbox>
     </div>
     <div class="controls">
-      <button class="btn">
+      <button class="btn" @click="search = true">
         <i class="fas fa-search"></i>
       </button>
     </div>
-    <div class="search">
+    <div class="search" :class="{ 'is-open': search }">
       <div class="search__header">
-        <h2 class="title">Search</h2>
-        <button class="btn">
+        <h2 class="title">Find</h2>
+        <button class="btn" @click="search = false">
           <i class="fas fa-times"></i>
         </button>
+      </div>
+      <div class="search__body">
+
       </div>
     </div>
   </div>
@@ -41,7 +44,8 @@
       return {
         center: {lat: 52.489471, lng: -1.898575},
         zoom: 12,
-        markers: []
+        markers: [],
+        search: false
       }
     },
     components: {

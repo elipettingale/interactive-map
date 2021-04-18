@@ -18,14 +18,14 @@
       </mapbox>
     </div>
     <div class="controls">
-      <button class="btn" @click="search_open = true">
+      <button class="btn" @click="open_search">
         <i class="fas fa-search"></i>
       </button>
     </div>
     <div class="search">
       <div class="search__header">
         <h2 class="title">Find your Location</h2>
-        <button class="btn" @click="search_open = false">
+        <button class="btn" @click="close_search">
           <i class="fas fa-times"></i>
         </button>
       </div>
@@ -102,6 +102,18 @@
         this.$refs.mapbox.map.flyTo({
           center: location.coords
         })
+      },
+
+      open_search() {
+        this.search_open = true;
+      },
+
+      close_search() {
+        this.search_open = false;
+
+        setTimeout(() => {
+          this.search = '';
+        }, 300);
       }
     }
   });

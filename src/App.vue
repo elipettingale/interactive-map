@@ -1,6 +1,11 @@
 
 <template>
-  <mapbox></mapbox>
+  <mapbox
+    :center="center"
+    v-on:update:center="update_center"
+    :zoom="zoom"
+    v-on:update:zoom="update_zoom"
+  ></mapbox>
 </template>
 
 <script>
@@ -9,10 +14,22 @@
 
   export default defineComponent({
     data() {
-      return {}
+      return {
+        center: {lat: 52.489471, lng: -1.898575},
+        zoom: 12
+      }
     },
     components: {
       Mapbox
+    },
+    methods: {
+      update_zoom(zoom) {
+        this.zoom = zoom;
+      },
+
+      update_center(center) {
+        this.center = center;
+      }
     }
   });
 </script>

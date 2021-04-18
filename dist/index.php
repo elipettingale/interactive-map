@@ -5,7 +5,9 @@
     <title>Interactive Map</title>
 </head>
 <body>
-<h1>Interactive Map</h1>
+<main class="main">
+    <h1>Interactive Map</h1>
+</main>
 <script src="main.js"></script>
 </body>
 </html>

@@ -1,2 +1,2 @@
-
-console.log('loaded');
+import _ from 'lodash';
+import './style.css';

@@ -1,4 +1,3 @@
-import _ from 'lodash';
 import './style.pcss';
 import { createApp } from 'vue';
 import App from './App.vue';

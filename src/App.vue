@@ -1,13 +1,20 @@
 
 <template>
-  <mapbox
-    :center="center"
-    @update_center="update_center"
-    :zoom="zoom"
-    @update_zoom="update_zoom"
-  >
-    <mapbox-marker v-for="marker in markers" :coords="marker.coords" />
-  </mapbox>
+  <div class="app">
+    <div class="app__map">
+      <mapbox
+          :center="center"
+          @update_center="update_center"
+          :zoom="zoom"
+          @update_zoom="update_zoom"
+      >
+        <mapbox-marker v-for="marker in markers" :coords="marker.coords" />
+      </mapbox>
+    </div>
+    <div class="app__controls">
+
+    </div>
+  </div>
 </template>
 
 <script>

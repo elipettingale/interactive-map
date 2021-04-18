@@ -1,14 +1,14 @@
 
 @import "https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css";
 
-html, body, .main {
+html, body {
     height: 100%;
     width: 100%;
     margin: 0;
     padding: 0;
 }
 
-.mapbox, .mapboxgl-map {
-    width: 100%;
-    height: 100%;
+.mapboxgl-map {
+    height: 100vh;
+    width: 100vw;
 }

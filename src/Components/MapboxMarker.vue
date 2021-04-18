@@ -1,6 +1,3 @@
-<template>
-  <div ref="marker"></div>
-</template>
 
 <script>
 export default {
@@ -15,6 +12,9 @@ export default {
     return {
       marker: null
     }
+  },
+  render() {
+    return '';
   }
 }
 </script>

@@ -168,7 +168,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _MapboxMarker_vue_vue_type_template_id_3e852b99__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./MapboxMarker.vue?vue&type=template&id=3e852b99 */ \"./src/Components/MapboxMarker.vue?vue&type=template&id=3e852b99\");\n/* harmony import */ var _MapboxMarker_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./MapboxMarker.vue?vue&type=script&lang=js */ \"./src/Components/MapboxMarker.vue?vue&type=script&lang=js\");\n\n\n\n_MapboxMarker_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__.default.render = _MapboxMarker_vue_vue_type_template_id_3e852b99__WEBPACK_IMPORTED_MODULE_0__.render\n/* hot reload */\nif (false) {}\n\n_MapboxMarker_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__.default.__file = \"src/Components/MapboxMarker.vue\"\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_MapboxMarker_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__.default);\n\n//# sourceURL=webpack://interactive-map/./src/Components/MapboxMarker.vue?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _MapboxMarker_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./MapboxMarker.vue?vue&type=script&lang=js */ \"./src/Components/MapboxMarker.vue?vue&type=script&lang=js\");\n\n\n/* hot reload */\nif (false) {}\n\n_MapboxMarker_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_0__.default.__file = \"src/Components/MapboxMarker.vue\"\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_MapboxMarker_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_0__.default);\n\n//# sourceURL=webpack://interactive-map/./src/Components/MapboxMarker.vue?");
 
 /***/ }),
 
@@ -179,7 +179,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({\n  name: \"mapbox-marker\",\n  props: ['coords'],\n  mounted() {\n    this.marker = new mapboxgl.Marker()\n        .setLngLat(this.coords)\n        .addTo(this.$parent.map);\n  },\n  data() {\n    return {\n      marker: null\n    }\n  }\n});\n\n\n//# sourceURL=webpack://interactive-map/./src/Components/MapboxMarker.vue?./node_modules/vue-loader/dist/index.js??ruleSet%5B1%5D.rules%5B4%5D.use%5B0%5D");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({\n  name: \"mapbox-marker\",\n  props: ['coords'],\n  mounted() {\n    this.marker = new mapboxgl.Marker()\n        .setLngLat(this.coords)\n        .addTo(this.$parent.map);\n  },\n  data() {\n    return {\n      marker: null\n    }\n  },\n  render() {\n    return '';\n  }\n});\n\n\n//# sourceURL=webpack://interactive-map/./src/Components/MapboxMarker.vue?./node_modules/vue-loader/dist/index.js??ruleSet%5B1%5D.rules%5B4%5D.use%5B0%5D");
 
 /***/ }),
 
@@ -238,17 +238,6 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
-/***/ "./src/Components/MapboxMarker.vue?vue&type=template&id=3e852b99":
-/*!***********************************************************************!*\
-  !*** ./src/Components/MapboxMarker.vue?vue&type=template&id=3e852b99 ***!
-  \***********************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"render\": () => (/* reexport safe */ _node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_1_node_modules_vue_loader_dist_index_js_ruleSet_1_rules_4_use_0_MapboxMarker_vue_vue_type_template_id_3e852b99__WEBPACK_IMPORTED_MODULE_0__.render)\n/* harmony export */ });\n/* harmony import */ var _node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_1_node_modules_vue_loader_dist_index_js_ruleSet_1_rules_4_use_0_MapboxMarker_vue_vue_type_template_id_3e852b99__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[1]!../../node_modules/vue-loader/dist/index.js??ruleSet[1].rules[4].use[0]!./MapboxMarker.vue?vue&type=template&id=3e852b99 */ \"./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[1]!./node_modules/vue-loader/dist/index.js??ruleSet[1].rules[4].use[0]!./src/Components/MapboxMarker.vue?vue&type=template&id=3e852b99\");\n\n\n//# sourceURL=webpack://interactive-map/./src/Components/MapboxMarker.vue?");
-
-/***/ }),
-
 /***/ "./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[1]!./node_modules/vue-loader/dist/index.js??ruleSet[1].rules[4].use[0]!./src/App.vue?vue&type=template&id=7ba5bd90":
 /*!*********************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[1]!./node_modules/vue-loader/dist/index.js??ruleSet[1].rules[4].use[0]!./src/App.vue?vue&type=template&id=7ba5bd90 ***!
@@ -268,17 +257,6 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"render\": () => (/* binding */ render)\n/* harmony export */ });\n/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ \"./node_modules/vue/dist/vue.runtime.esm-bundler.js\");\n\n\nconst _hoisted_1 = { class: \"mapbox\" }\nconst _hoisted_2 = { ref: \"mapbox\" }\n\nfunction render(_ctx, _cache, $props, $setup, $data, $options) {\n  return ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(\"div\", _hoisted_1, [\n    (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(\"div\", _hoisted_2, null, 512 /* NEED_PATCH */),\n    ($data.loaded)\n      ? (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderSlot)(_ctx.$slots, \"default\", { key: 0 })\n      : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(\"v-if\", true)\n  ]))\n}\n\n//# sourceURL=webpack://interactive-map/./src/Components/Mapbox.vue?./node_modules/vue-loader/dist/templateLoader.js??ruleSet%5B1%5D.rules%5B1%5D!./node_modules/vue-loader/dist/index.js??ruleSet%5B1%5D.rules%5B4%5D.use%5B0%5D");
-
-/***/ }),
-
-/***/ "./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[1]!./node_modules/vue-loader/dist/index.js??ruleSet[1].rules[4].use[0]!./src/Components/MapboxMarker.vue?vue&type=template&id=3e852b99":
-/*!*****************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[1]!./node_modules/vue-loader/dist/index.js??ruleSet[1].rules[4].use[0]!./src/Components/MapboxMarker.vue?vue&type=template&id=3e852b99 ***!
-  \*****************************************************************************************************************************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"render\": () => (/* binding */ render)\n/* harmony export */ });\n/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ \"./node_modules/vue/dist/vue.runtime.esm-bundler.js\");\n\n\nconst _hoisted_1 = { ref: \"marker\" }\n\nfunction render(_ctx, _cache, $props, $setup, $data, $options) {\n  return ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(\"div\", _hoisted_1, null, 512 /* NEED_PATCH */))\n}\n\n//# sourceURL=webpack://interactive-map/./src/Components/MapboxMarker.vue?./node_modules/vue-loader/dist/templateLoader.js??ruleSet%5B1%5D.rules%5B1%5D!./node_modules/vue-loader/dist/index.js??ruleSet%5B1%5D.rules%5B4%5D.use%5B0%5D");
 
 /***/ }),
 

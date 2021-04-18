@@ -12,7 +12,9 @@
       </mapbox>
     </div>
     <div class="app__controls">
-
+      <button class="btn">
+        <i class="fas fa-search"></i>
+      </button>
     </div>
   </div>
 </template>

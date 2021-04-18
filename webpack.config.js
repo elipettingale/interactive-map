@@ -19,11 +19,11 @@ module.exports = {
         rules: [
             {
                 test: /\.css$/i,
-                use: [
-                    'style-loader',
-                    'css-loader',
-                    'postcss-loader'
-                ]
+                use: ['style-loader', 'css-loader']
+            },
+            {
+                test: /\.pcss$/i,
+                use: ['style-loader', 'css-loader', 'postcss-loader']
             },
             {
                 test: /\.vue$/,

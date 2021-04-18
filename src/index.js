@@ -1,5 +1,5 @@
 import _ from 'lodash';
-import './style.css';
+import './style.pcss';
 import { createApp } from 'vue';
 import App from './App.vue';
 

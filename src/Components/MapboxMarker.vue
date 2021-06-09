@@ -11,6 +11,14 @@ export default {
       this.$emit('click');
     });
 
+    let colors = {
+      1: 'orange',
+      2: 'green',
+      3: 'red'
+    }
+
+    this.element.classList.add(`is-${colors[this.location.category]}`);
+
     this.marker = new mapboxgl.Marker(this.element)
         .setLngLat(this.location.coords)
         .addTo(this.$parent.map);

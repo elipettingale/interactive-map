@@ -31,6 +31,19 @@
       </div>
       <div class="search__body">
         <input type="text" v-model="search" placeholder="Search" />
+        <div class="categories">
+          <button class="btn is-orange">
+            <i class="fas fa-utensils"></i>
+          </button>
+
+          <button class="btn is-green">
+            <i class="fas fa-bicycle"></i>
+          </button>
+
+          <button class="btn is-red">
+            <i class="fas fa-building"></i>
+          </button>
+        </div>
         <div class="results">
           <result
               v-for="location in filtered_locations"

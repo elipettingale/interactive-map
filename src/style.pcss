@@ -207,14 +207,39 @@ h1, h2, h3, h4, h5, p {
     padding: 1rem;
     margin-bottom: 0.5rem;
 
-    &.is-active {
-        background: rgba(176, 101, 179, 0.2);
-    }
-
     &:hover {
-        background: var(--purple-light);
         color: var(--white);
         cursor: pointer;
+    }
+
+    &.is-orange {
+        &.is-active {
+            background: rgba(210, 103, 10, 0.2);
+        }
+
+        &:hover {
+            background: var(--orange-light);
+        }
+    }
+
+    &.is-green {
+        &.is-active {
+            background: rgba(84, 134, 0, 0.2);
+        }
+
+        &:hover {
+            background: var(--green-light);
+        }
+    }
+
+    &.is-red {
+        &.is-active {
+            background: rgba(154, 4, 39, 0.2);
+        }
+
+        &:hover {
+            background: var(--red-light);
+        }
     }
 
     &__title {

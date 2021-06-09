@@ -32,15 +32,15 @@
       <div class="search__body">
         <input type="text" v-model="search" placeholder="Search" />
         <div class="categories">
-          <button class="btn is-orange" @click="toggle_category(1)" :class="{ 'is-active': active_categories.has(1) }">
+          <button class="btn is-orange" @click="toggle_category(1)" :class="{ 'is-active': active_categories.includes(1) }">
             <i class="fas fa-utensils"></i>
           </button>
 
-          <button class="btn is-green" @click="toggle_category(2)" :class="{ 'is-active': active_categories.has(2) }">
+          <button class="btn is-green" @click="toggle_category(2)" :class="{ 'is-active': active_categories.includes(2) }">
             <i class="fas fa-bicycle"></i>
           </button>
 
-          <button class="btn is-red" @click="toggle_category(3)" :class="{ 'is-active': active_categories.has(3) }">
+          <button class="btn is-red" @click="toggle_category(3)" :class="{ 'is-active': active_categories.includes(3) }">
             <i class="fas fa-building"></i>
           </button>
         </div>
@@ -82,19 +82,16 @@
         search_open: false,
         search: '',
         active_location_id: null,
-        active_categories: new Set([1,2,3])
+        active_categories: [1,2,3]
       }
     },
     computed: {
       filtered_locations() {
-        if (this.search === '') {
-          return this.locations;
-        }
-
         let search = this.search.toLowerCase();
+        let active_categories = this.active_categories;
 
         return this.locations.filter((location) => {
-          if (!this.active_categories.has(location.category)) {
+          if (!active_categories.includes(location.category)) {
             return false;
           }
 
@@ -132,10 +129,11 @@
       },
 
       toggle_category(category) {
-        if (this.active_categories.has(category)) {
-          this.active_categories.delete(category);
+        if (this.active_categories.includes(category)) {
+          let index = this.active_categories.indexOf(category);
+          this.active_categories.splice(index, 1);
         } else {
-          this.active_categories.add(category);
+          this.active_categories.push(category);
         }
       },
 
